@@ -79,3 +79,7 @@ resource "yandex_compute_instance" "web_app" {
 output "external_ip" {
   value = yandex_compute_instance.web_app.network_interface.0.nat_ip_address
 }
+# --- Задание 5*. Yandex Lockbox ---
+# Предполагается, что секрет уже создан вручную
+data "yandex_lockbox_secret_version" "db_password" {
+  secret_id = var.secret_id
