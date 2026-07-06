@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    image: cr.yandex/${REGISTRY_ID}/py-web-app:latest
+    ports:
+      - "80:80"
+    environment:
+      - DB_HOST=rc1a-xxxxxx.mdb.yandexcloud.net
+      - DB_USER=dbuser
+      - DB_PASSWORD=YOUR_DB_PASSWORD
+      - DB_NAME=webapp
+    restart: always
