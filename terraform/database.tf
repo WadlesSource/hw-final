@@ -25,7 +25,7 @@ resource "yandex_mdb_mysql_database" "app_db" {
 resource "yandex_mdb_mysql_user" "app_user" {
   cluster_id = yandex_mdb_mysql_cluster.db.id
   name       = "dbuser"
-  password   = var.db_password
+  password   = data.yandex_lockbox_secret_version.db_password.entries["password"]
   permission {
     database_name = yandex_mdb_mysql_database.app_db.name
     roles         = ["ALL"]
