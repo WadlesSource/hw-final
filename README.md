@@ -1,10 +1,10 @@
 # Итоговый проект модуля «Облачная инфраструктура. Terraform»
 ## 1. Описание инфраструктуры
-- Инфраструктура: Описана на Terraform. Состояние (`state`) хранится удаленно в S3-бакете Object Storage с поддержкой блокировок `statelocking`.
+- Инфраструктура: Описана на [Terraform](./terraform). Состояние (`state`) хранится удаленно в S3-бакете Object Storage с поддержкой блокировок `statelocking`.
 - Сеть: Создан VPC, 1 публичная подсеть, настроены Security Groups (порты 22, 80, 443).
 - VM, VPC и Secutiry Groups создаются в [Ссылка на main.tf](./terraform/main.tf)
 - БД MySQL создается в [Ссылка на database.tf](./terraform/database.tf)
-- Данные для создания инфраструктуры хранятся в (`personal.auto.tfvars`)
+- Секретные данные для создания инфраструктуры хранятся в (`personal.auto.tfvars`)
 ## 2. Развертывание инфраструктуры
 Команды для развертывания:
 - terraform init
