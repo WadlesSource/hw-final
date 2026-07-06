@@ -30,7 +30,3 @@ variable "secret_id" {
   description = "https://yandex.cloud/ru/docs/lockbox/operations/secret-create"
 }
 
-variable "db_password" { 
-  type        = string 
-  sensitive   = true 
-}
