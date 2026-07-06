@@ -25,7 +25,12 @@ variable "default_cidr" {
   description = "https://cloud.yandex.ru/docs/vpc/operations/subnet-create"
 }
 
+variable "secret_id" { 
+  type        = string 
+  description = "https://yandex.cloud/ru/docs/lockbox/operations/secret-create"
+}
+
 variable "db_password" { 
   type        = string 
-  sensitive = true 
+  sensitive   = true 
 }
